@@ -1,28 +1,122 @@
-<!DOCTYPE html>
 <html>
+
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <title>ECharts</title>
-    <!-- 引入 echarts.js -->
+    <title>Amanda Leung Homework 5</title>
     <script src="echarts.min.js"></script>
+    <style>
+        .banner {
+            background-image: url("patterns/banner.jpg");
+            background-size: 100% 300px;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 600px;height:400px;"></div>
+    <div class="container">
+        <div class="banner">
+            <br>
+            <h1 style="text-align: center"><u>Solid waste statistics</u></h1>
+            <br><br>
+            <hr>
+        </div>
+        <div class="col-xs-12" id="main1" style="width: 1200px;height:500px;"></div>
+        <br>
+        <div class="col-xs-12" id="main2" style="width: 1150px;height:650px;"></div>
+        <br>
+        <hr>
+        <div class="col-xs-12" id="main3" style="width: 1200px;height:600px;"> </div>
+
+    </div>
+   <!--chart1-->
+
     <script type="text/javascript">
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main'));
+        $(function() {
+            var myChart1 = echarts.init(document.getElementById('main1'));
 
-        // 指定图表的配置项和数据
+ option = {
+     title: {
+                    text: 'Average solid waste quantities by type',
+                },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data:['Special waste','Construction waste','Municipal solid waste']
+    },
+    grid: {
+        left: '5%',
+        right: '5%',
+        bottom: '5%',
+        containLabel: true
+    },
+    xAxis : [
+        {
+            type : 'category',
+            data : ['2009','2010','2011','2012','2013','2014','2015']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'Municipal solid waste',
+            type:'bar',
+            stack: 'waste',
+            data:[8963,9114,8996,9278,9547,9782,10160],
+            markPoint : {
+                data : [
+                    {type : 'max', name: 'maximum'},
+                    {type : 'min', name: 'minimum'}
+                ]
+        }
+        },
+        {
+            name:'Construction waste',
+            type:'bar',
+            stack: 'waste',
+            data:[3121,3584,3331,3440,3591,3942,4200]
+        },
+        {
+            name:'Special waste',
+            type:'bar',
+            stack: 'waste',
+            data:[1243,1119,1131,1127,1173,1135,740]
+        },
+    ]
+};
+            myChart1.setOption(option);
+        });
+    </script>
 
-option = {
+    <!--chart2-->
+    <script type="text/javascript">
+        $(function() {
+            var myChart2 = echarts.init(document.getElementById('main2'));
+
+            option = {
+                title: {
+                    text: 'Distribution of municipal solid waste in 2015',
+                },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: {
         orient: 'vertical',
-        x: 'left',
+        x: 'right',
         data:['Construction waste','Special waste','Municipal solid waste']
     },
     series: [
@@ -59,14 +153,42 @@ option = {
                 {value:6460, name:'Domestic'},
                 {value:2810, name:'Commercial'},
                 {value:890, name:'Industrial'},
-                
             ]
         }
     ]
 };
-
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
+            myChart2.setOption(option);
+        });
     </script>
+
+            <!--chart3-->
+    <script type="text/javascript">
+        $(function() {
+            $.getJSON('option3.json', function(data) {
+                var option = data;
+                var myChart3 = echarts.init(document.getElementById('main3'));
+                myChart3.setOption(option);
+            })
+        });
+    </script>
+
+    <footer>
+        <hr>
+        <div class="col-xs-6">
+            <p style="text-align: right">eCharts :</p>
+            <a href="http://echarts.baidu.com/demo.html#bar-stack">
+                <p style="text-align: right">Bar Chart</p>
+            </a>
+            <a href="http://echarts.baidu.com/demo.html#bar1g">
+                <p style="text-align: right">Pie Chart</p>
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <p style="text-align: left">Data :</p>
+            <a href="https://data.gov.hk/tc-data/dataset/hk-censtatd-tablechart-solid-waste/resource/6e984d36-ccec-4b26-8314-1ea39baff57a">
+                <p style="text-align: left">data.gov.hk</p>
+            </a>
+        </div>
+    </footer>
+
 </body>
-</html>
