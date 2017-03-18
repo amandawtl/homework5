@@ -6,12 +6,14 @@
                     "playInterval": 1500,
                     "data": ["2009", "2010", "2011", "2012", "2013", "2014", "2015"]
                 },
-
+"tooltip": {
+                "trigger": "item",
+                "formatter": "year {b}"
+            },
     "options": [{
             "title": {
                 "text": "Average solid waste quantities by type"
             },
-
             "legend": {
                 "data": [
                     "Special waste",
@@ -19,7 +21,6 @@
                     "Municipal solid waste"
                 ]
             },
-
             "toolbox": {
                 "show": true,
                 "feature": {
