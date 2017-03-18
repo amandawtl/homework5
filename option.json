@@ -11,9 +11,6 @@
             "title": {
                 "text": "Average solid waste quantities by type"
             },
-            "tooltip": {
-                "trigger": "item",
-            },
 
             "legend": {
                 "data": [
