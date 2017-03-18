@@ -8,7 +8,7 @@
                 },
 "tooltip": {
                 "trigger": "item",
-                "formatter": "year {b}"
+                "formatter": "year {a} "
             },
     "options": [{
             "title": {
