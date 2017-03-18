@@ -157,10 +157,11 @@
            <!--chart3-->
     <script type="text/javascript">
         $(function() {
-            $.getJSON('option.json', function(data) {
+
+            $.getJSON("option.json", function(data) {
+                var myChart = echarts.init(document.getElementById('main'));
                 var option = data;
-                var myChart3 = echarts.init(document.getElementById('main3'));
-                myChart2.setOption(option);
+                myChart.setOption(option);
             })
         });
     </script>
