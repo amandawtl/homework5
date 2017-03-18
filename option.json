@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -1412,3 +1413,174 @@
   </body>
 </html>
 
+=======
+{
+    "timeline": {
+        "data": [ "2009", "2010", "2011", "2012", "2013", "2014", "2015"],
+        "type": "number",
+        "symbolRotate": "30",
+        "playInterval": "1000",
+        "loop": true,
+        "autoplay": true,
+        "symbol": "circle"
+    },
+
+    "options": [{
+            "title": {
+                "text": "Average solid waste quantities by type",
+            },
+            "tooltip": {
+                "trigger": "item",
+                "formatter": "{a} year {b} : {c} "
+            },
+
+        "legend": {
+                "data": ["Special waste","Construction waste","Municipal solid waste"]
+            },
+
+            "toolbox": {
+                "show": true,
+                "feature": {
+                    "mark": {
+                        "show": true
+                    },
+                    "dataView": {
+                        "show": true,
+                        "readOnly": false
+                    },
+                    "magicType": {
+                        "show": true,
+                        "type": ["pie", "funnel"],
+                        "options": {
+                            "funnel": {
+                                "x": "25%",
+                                "width": "50%",
+                                "funnelAlign": "left",
+                                "max": 1700
+                            }
+                        }
+                    },
+                    "restore": {
+                        "show": true
+                    },
+                    "saveAsImage": {
+                        "show": true
+                    }
+                }
+            },
+            "series": [{
+                "name": "2009",
+                "type": "pie",
+                "center": ["50%", "45%"],
+                "radius": "50%",
+                "data": [{
+                    "value": "1243",
+                    "name": "Special waste"
+                }, {
+                    "value": "3121",
+                    "name": "Construction waste"
+                }, {
+                    "value": "8963",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2010",
+                "type": "pie",
+                "data": [{
+                    "value": "1119",
+                    "name": "Special waste"
+                }, {
+                    "value": "3584",
+                    "name": "Construction waste"
+                }, {
+                    "value": "9114",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2011",
+                "type": "pie",
+                "data": [{
+                    "value": "1131",
+                    "name": "Special waste"
+                }, {
+                    "value": "3331",
+                    "name": "Construction waste"
+                }, {
+                    "value": "8996",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2012",
+                "type": "pie",
+                "data": [{
+                    "value": "1127",
+                    "name": "Special waste"
+                }, {
+                    "value": "3440",
+                    "name": "Construction waste"
+                }, {
+                    "value": "9278",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2013",
+                "type": "pie",
+                "data": [{
+                    "value": "1173",
+                    "name": "Special waste"
+                }, {
+                    "value": "3591",
+                    "name": "Construction waste"
+                }, {
+                    "value": "9547",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2014",
+                "type": "pie",
+                "data": [{
+                    "value": "1135",
+                    "name": "Special waste"
+                }, {
+                    "value": "3942",
+                    "name": "Construction waste"
+                }, {
+                    "value": "9782",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+        {
+            "series": [{
+                "name": "2015）",
+                "type": "pie",
+                "data": [{
+                    "value": "740",
+                    "name": "Special waste"
+                }, {
+                    "value": "4200",
+                    "name": "Construction waste"
+                }, {
+                    "value": "10160",
+                    "name": "Municipal solid waste"
+                },]
+            }]
+        },
+    ]
+}
+>>>>>>> origin/gh-pages
