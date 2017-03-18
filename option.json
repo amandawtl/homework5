@@ -18,11 +18,9 @@
                 "formatter": "{a} {b} : {c} "
             },
 
-            legend: {
-        orient: 'vertical',
-        x: 'right',
-        data:['Special waste','Construction waste','Municipal solid waste']
-    },
+        "legend": {
+                "data": ["Special waste","Construction waste","Municipal solid waste"]
+            },
 
             "toolbox": {
                 "show": true,
