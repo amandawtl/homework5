@@ -13,7 +13,6 @@
             },
             "tooltip": {
                 "trigger": "item",
-                "formatter": "{a} year {b} : {c} "
             },
 
             "legend": {
