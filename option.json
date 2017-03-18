@@ -1,7 +1,7 @@
 {
     
     "timeline": {
-                    "axisType": 'category',
+                    "axisType": "category",
                     "show": true,
                     "autoPlay": true,
                     "playInterval": 1500,
