@@ -11,7 +11,7 @@
 
     "options": [{
             "title": {
-                "text": "Average solid waste quantities by type",
+                "text": "Average solid waste quantities by type"
             },
             "tooltip": {
                 "trigger": "item",
@@ -22,7 +22,7 @@
         "data": [
             "Special waste",
             "Construction waste",
-            "Municipal solid waste",
+            "Municipal solid waste"
         ]
     },
 
@@ -70,7 +70,7 @@
                 }, {
                     "value": "8963",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -86,7 +86,7 @@
                 }, {
                     "value": "9114",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -102,7 +102,7 @@
                 }, {
                     "value": "8996",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -118,7 +118,7 @@
                 }, {
                     "value": "9278",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -134,7 +134,7 @@
                 }, {
                     "value": "9547",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -150,12 +150,12 @@
                 }, {
                     "value": "9782",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
             "series": [{
-                "name": "2015）",
+                "name": "2015",
                 "type": "pie",
                 "data": [{
                     "value": "740",
@@ -166,8 +166,6 @@
                 }, {
                     "value": "10160",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
-        },
-    ]
-}
+        }
