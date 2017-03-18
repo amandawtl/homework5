@@ -10,12 +10,6 @@
     <meta charset="utf-8">
     <title>Amanda Leung Homework 5</title>
     <script src="echarts.min.js"></script>
-    <style>
-        .banner {
-            background-image: url("patterns/banner.jpg");
-            background-size: 100% 300px;
-        }
-    </style>
 </head>
 
 <body>
@@ -164,10 +158,11 @@
            <!--chart3-->
     <script type="text/javascript">
         $(function() {
-            $.getJSON('option.json', function(data) {
+            $.getJSON("option.json", function(data) {
+                console.log(data);
+                var myChart = echarts.init(document.getElementById('main3'));
                 var option = data;
-                var myChart3 = echarts.init(document.getElementById('main2'));
-                myChart3.setOption(option);
+                myChart.setOption(option);
             })
         });
     </script>
