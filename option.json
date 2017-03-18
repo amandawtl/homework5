@@ -18,8 +18,8 @@ option = {
                 "formatter": "{a} year {b} : {c} "
             },
 
-            legend: {
-        data:[“Special waste”, “Construction waste”, “Municipal solid waste”]
+            "legend": {
+        data:['Special waste', 'Construction waste', 'Municipal solid waste']
     },
 
             "toolbox": {
