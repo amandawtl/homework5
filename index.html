@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
 
+        // 指定图表的配置项和数据
+
+option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        x: 'left',
+        data:['Construction waste','Special waste','Municipal solid waste']
+    },
+    series: [
+        {
+            name:'Average solid waste quantities by type',
+            type:'pie',
+            selectedMode: 'single',
+            radius: [0, '50%'],
+
+            label: {
+                normal: {
+                    position: 'inner'
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:4200, name:'Construction waste', selected:true},
+                {value:740, name:'Special waste'},
+                {value:10160, name:'Municipal solid waste'}
+            ]
+        },
+        {
+            name:'Average solid waste quantities by type',
+            type:'pie',
+            radius: ['65%', '85%'],
+
+            data:[
+                {value:4200, name:'Construction waste'},
+                {value:740, name:'Special waste'},
+                {value:6460, name:'Domestic'},
+                {value:2810, name:'Commercial'},
+                {value:890, name:'Industrial'},
+                
+            ]
+        }
+    ]
+};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
