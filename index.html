@@ -159,7 +159,8 @@
         $(function() {
 
             $.getJSON("option.json", function(data) {
-                var myChart = echarts.init(document.getElementById('main'));
+                console.log(data);
+                var myChart = echarts.init(document.getElementById('main3'));
                 var option = data;
                 myChart.setOption(option);
             })
