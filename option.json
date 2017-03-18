@@ -1,24 +1,29 @@
 {
-    
     "timeline": {
-                    "axisType": "category",
-                    "show": true,
-                    "autoPlay": true,
-                    "playInterval": 1500,
-                    "data": ["2009", "2010", "2011", "2012", "2013", "2014", "2015"]
-                },
+        "data": ["2009", "2010", "2011", "2012", "2013", "2014", "2015"],
+        "type": "number",
+        "symbolRotate": "30",
+        "playInterval": "1000",
+        "loop": true,
+        "autoplay": true,
+        "symbol": "circle"
+    },
 
     "options": [{
             "title": {
-                "text": "Average solid waste quantities by type",
+                "text": "Average solid waste quantities by type"
             },
             "tooltip": {
                 "trigger": "item",
                 "formatter": "{a} year {b} : {c} "
             },
 
-        "legend": {
-                "data": ["Special waste","Construction waste","Municipal solid waste"]
+            "legend": {
+                "data": [
+                    "Special waste",
+                    "Construction waste",
+                    "Municipal solid waste"
+                ]
             },
 
             "toolbox": {
@@ -65,7 +70,7 @@
                 }, {
                     "value": "8963",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -81,7 +86,7 @@
                 }, {
                     "value": "9114",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -97,7 +102,7 @@
                 }, {
                     "value": "8996",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -113,7 +118,7 @@
                 }, {
                     "value": "9278",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -129,7 +134,7 @@
                 }, {
                     "value": "9547",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -145,7 +150,7 @@
                 }, {
                     "value": "9782",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
         },
         {
@@ -161,8 +166,8 @@
                 }, {
                     "value": "10160",
                     "name": "Municipal solid waste"
-                },]
+                }]
             }]
-        },
+        }
     ]
 }
