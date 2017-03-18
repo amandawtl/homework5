@@ -14,7 +14,6 @@
 
 <body>
     <div class="container">
-        <div class="banner">
             <br>
             <h1 style="text-align: center"><u>Solid waste statistics</h1>
             <br><br>
@@ -36,7 +35,7 @@
 
  option = {
      title: {
-                    text: 'Average solid waste quantities by type',
+                    text: 'Compositions of municipal solid waste',
                 },
     tooltip : {
         trigger: 'axis',
@@ -66,10 +65,10 @@
     ],
     series : [
         {
-            name:'Municipal solid waste',
+            name:'Domestic',
             type:'bar',
             stack: 'waste',
-            data:[8963,9114,8996,9278,9547,9782,10160],
+            data:[6015,6135,5973,6286,6359,6418,6460],
             markPoint : {
                 data : [
                     {type : 'max', name: 'maximum'},
@@ -78,16 +77,16 @@
         }
         },
         {
-            name:'Construction waste',
+            name:'Commercial',
             type:'bar',
             stack: 'waste',
-            data:[3121,3584,3331,3440,3591,3942,4200]
+            data:[2319,2352,2360,2260,2408,2565,2810]
         },
         {
-            name:'Special waste',
+            name:'Industrial',
             type:'bar',
             stack: 'waste',
-            data:[1243,1119,1131,1127,1173,1135,740]
+            data:[ 629,627,663,732,780,799,890]
         },
     ]
 };
@@ -158,11 +157,10 @@
            <!--chart3-->
     <script type="text/javascript">
         $(function() {
-            $.getJSON("option.json", function(data) {
-                console.log(data);
-                var myChart = echarts.init(document.getElementById('main3'));
+            $.getJSON('option.json', function(data) {
                 var option = data;
-                myChart.setOption(option);
+                var myChart3 = echarts.init(document.getElementById('main3'));
+                myChart2.setOption(option);
             })
         });
     </script>
